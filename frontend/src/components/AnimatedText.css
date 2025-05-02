@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+.animated-text-container {
+  display: block; 
+}
+
+/* Style the paragraph directly */
+.animated-text-container p {
+  
+  margin: 0; 
+  font-family: 'Source Code Pro', monospace;
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  display: inline; 
+}
+
+.animated-text-container p.cursor-blink {
+  border-right: solid 3px rgba(0, 0, 0, 0.75); 
+  
+  padding-right: 3px; 
+  animation: animated-cursor 500ms steps(1, end) infinite;
+}
+
+@keyframes animated-cursor {
+  0%, 100% { border-right-color: rgba(0, 0, 0, 0.75); } 
+  50% { border-right-color: transparent; } 
+}
+

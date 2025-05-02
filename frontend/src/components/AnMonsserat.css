@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+
+.container {
+  display: flex;
+  /* height: 100%; */
+  align-items: center;
+  justify-content: center;
+ 
+  padding-left: 10px;
+  padding-right: 10px;
+  /* padding-bottom: -200px; */ /* Removed negative padding */
+}
+
+svg {
+  display: block;
+  width: 100%;
+ height: auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: rgb(204, 62, 62);
+  stroke-dasharray: 5% 30%;
+  stroke-width: 2px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s linear infinite;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #BD0034;
+  animation-delay: -1s;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #00ffaa;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #ff00dd;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #000000;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #73ff00;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+

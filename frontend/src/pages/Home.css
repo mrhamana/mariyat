@@ -1,0 +1,54 @@
+.content{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 10px;
+    position: absolute;
+ 
+    top: 120%;
+    
+}
+
+.chatRomm{
+    
+    padding: 10px;
+    margin-right: 850px;
+    border-radius: 10px;
+    text-align: center;
+  
+    
+
+}
+
+.chatRomm-img{
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* Target the anchor tag within .chatRomm */
+.chatRomm a {
+    text-decoration: none;
+    color: black;
+}
+
+.description{
+   
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 40px;
+   
+}
+
+.tableofcontent{
+    position:absolute;
+    top:94%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+    font-size: 30px;
+}

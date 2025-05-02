@@ -1,0 +1,43 @@
+/* AnimatedLogo.css */
+.logo-container {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 2rem;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .arabic-logo {
+    font-family: 'Amiri', serif;  /* A classic Arabic font—ensure you import it or adjust */
+    font-size: 3rem;
+    color: #d60000;
+    position: relative;
+    z-index: 1;
+    animation:
+      glow 2s ease-in-out infinite alternate,
+      hueShift 6s linear infinite;
+  }
+  
+  /* glowing text-shadow pulse */
+  @keyframes glow {
+    from {
+      text-shadow:
+        0 0 4px #f0f,
+        0 0 8px #f0f,
+        0 0 16px #0ff;
+    }
+    to {
+      text-shadow:
+        0 0 16px #0ff,
+        0 0 32px #0ff,
+        0 0 48px #f0f;
+    }
+  }
+  
+  /* continuously rotate the hue */
+  @keyframes hueShift {
+    from { filter: hue-rotate(0deg); }
+    to   { filter: hue-rotate(360deg); }
+  }
+  

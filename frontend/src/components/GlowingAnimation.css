@@ -1,0 +1,78 @@
+.glow-wrapper {
+    position: absolute;
+    inset: 0;               /* shorthand for top:0; right:0; bottom:0; left:0; */
+    overflow: hidden;       /* keep the glow inside */
+    pointer-events: none;   /* clicks pass through */
+    z-index: 0;
+  }
+  
+  .glowing {
+    position: absolute;
+    inset: 0;               /* fill the wrapper */
+    animation: colorChange 5s linear infinite;
+    transform-origin: center;
+  }
+  
+  .glowing:nth-child(even) {
+    transform-origin: left;
+  }
+  
+  /* adjust spans to be at different offsets */
+  .glowing span {
+    position: absolute;
+    top: calc(var(--i) * 10%);
+    left: calc(var(--i) * 10%);
+    right: calc(var(--i) * 10%);
+    bottom: calc(var(--i) * 10%);
+  }
+  
+  /* the little glowing dots */
+  .glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f00;
+    /* default shadow */
+    box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00, 0 0 80px #f00, 0 0 0 8px rgba(255,0,0,0.1);
+  }
+  
+  /* color variants */
+  .glowing span:nth-child(3n+1)::before {
+    background: #86ff00;
+    box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 8px rgba(134,255,0,0.1);
+  }
+  .glowing span:nth-child(3n+2)::before {
+    background: #ffd600;
+    box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 8px rgba(255,214,0,0.1);
+  }
+  .glowing span:nth-child(3n+3)::before {
+    background: #00e2ff;
+    box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0,226,255,0.1);
+  }
+  
+  /* spin animations */
+  .glowing span:nth-child(3n+1) { animation: animate 10s alternate infinite; }
+  .glowing span:nth-child(3n+2) { animation: animate-reverse 3s alternate infinite; }
+  .glowing span:nth-child(3n+3) { animation: animate 8s alternate infinite; }
+  
+  @keyframes colorChange {
+    to {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes animate {
+    0%   { transform: rotate(180deg); }
+    50%  { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes animate-reverse {
+    0%   { transform: rotate(360deg); }
+    50%  { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+  }
+      
