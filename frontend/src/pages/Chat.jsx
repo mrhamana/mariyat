@@ -5,11 +5,16 @@ export default function Chat(){
     return (
         <div className="chatpage">
             <div className="forgeneral">
-                <div className="fortaskbar"></div>
-                <div className="formessage"></div>
+                <div className="fortaskbar">
+                    <p>This is for meunus and stuff. dont worry about it for now man</p>
+                </div>
+                <div className="formessage">
+                    <p>This is the area where texts will be visible mann</p>
+                </div>
                 
             </div>
             <div className="forchat" style={Typestyle}>
+                <Button text='For Chatting' ></Button>
                 <Typebar/>
                 <Button text='Send' ></Button>
             </div>

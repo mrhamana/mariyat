@@ -1,21 +1,21 @@
 import User from "../models/User.js"
-// Assume connectDB is called once at server startup, not here
+
 
 const registerUser = async (req, res) => {
     const { name, surname, email, password } = req.body;
     try {
-        // Check if user already exists
+        
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        // Hash password here before saving (not shown for brevity)
+        
         const newUser = new User({
             name,
             surname,
             email,
-            password // hash this!
+            password 
         });
 
         const savedUser = await newUser.save();
