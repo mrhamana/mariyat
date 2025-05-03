@@ -1,5 +1,6 @@
 import { Button } from "../components/Button"
 import Typebar from "../components/Typebar"
+import { textAPI } from "../api/home.js"
 import './Chat.css'
 export default function Chat(){
     return (
@@ -9,7 +10,7 @@ export default function Chat(){
                     <p>This is for meunus and stuff. dont worry about it for now man</p>
                 </div>
                 <div className="formessage">
-                    <p>This is the area where texts will be visible mann</p>
+                    <p>{textAPI}</p>
                 </div>
                 
             </div>
@@ -17,6 +18,7 @@ export default function Chat(){
                 <Button text='For Chatting' ></Button>
                 <Typebar/>
                 <Button text='Send' ></Button>
+
             </div>
 
             
