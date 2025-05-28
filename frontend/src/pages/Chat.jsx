@@ -1,6 +1,5 @@
 import { Button } from "../components/Button"
 import Typebar from "../components/Typebar"
-import { textAPI } from "../api/home.js"
 import './Chat.css'
 export default function Chat(){
     return (
@@ -10,7 +9,7 @@ export default function Chat(){
                     <p>This is for meunus and stuff. dont worry about it for now man</p>
                 </div>
                 <div className="formessage">
-                    <p>{textAPI}</p>
+                    
                 </div>
                 
             </div>

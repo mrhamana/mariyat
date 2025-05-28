@@ -7,7 +7,7 @@
     border-radius: 10px;
     position: absolute;
  
-    top: 120%;
+    top: 110%;
     
 }
 
@@ -45,7 +45,7 @@
 
 .tableofcontent{
     position:absolute;
-    top:94%;
+    top:87%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
